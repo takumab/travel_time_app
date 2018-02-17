@@ -1,24 +1,13 @@
-# README
+# Travel Time App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## The Problem
 
-* Ruby version
+- Need to predict arrival time of negotiators at each location they visit
 
-* System dependencies
+## The solution
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Build a web interface, using city mapper's API, which allows negotiators to:
+  - set_addresses (create) :: (Point A(Int/String), Point B(Int/String)) --> travel_time_minutes
+  - set_starttime_and_date (create):: String --> travel_time_minutes
+  - see_arrival_time (read):: --> travel_time_minutes
