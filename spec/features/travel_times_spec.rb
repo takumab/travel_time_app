@@ -18,7 +18,7 @@ RSpec.feature "Travel Times", type: :feature do
         fill_in 'Arrival', with: '2018-02-06T13:00:02-0500'
       end
       click_button 'Set'
-      expect(page).to have_content('Travel time: 29 minutes')
+      expect(page).to have_content('Travel time: 29 minute')
     end
   end
 

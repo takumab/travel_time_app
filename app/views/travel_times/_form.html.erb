@@ -1,0 +1,17 @@
+<%= form_tag({controller: "travel_times", action: "index"}, method: "get") do %>
+  <div class="location-fields">
+    <%= label_tag :start %>
+    <%= text_field_tag :start %>
+  </div>
+  <div class="location-fields">
+    <%= label_tag :end %>
+    <%= text_field_tag :end %>
+  </div>
+
+  <div class="arrival-field">
+    <%= label_tag :arrival %>
+    <%= text_field_tag :arrival %>
+  </div>
+
+  <%= submit_tag 'Set' %>
+<% end %>
