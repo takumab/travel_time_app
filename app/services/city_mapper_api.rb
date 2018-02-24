@@ -30,7 +30,7 @@ class CityMapperApi
       # would like to be able to add 19:00:02-500 to travel_time_minutes
       # ex: 19:00:02-500 + 31
       # => 19:31:02-500
-      @data['travel_time_minutes'] 
+      @data['travel_time_minutes']
     end
   end
 
