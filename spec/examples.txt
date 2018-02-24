@@ -1,5 +1,5 @@
 example_id                                    | status | run_time        |
 --------------------------------------------- | ------ | --------------- |
-./spec/features/travel_times_spec.rb[1:1:1]   | passed | 0.27966 seconds |
-./spec/features/travel_times_spec.rb[1:2:1]   | failed | 0.04529 seconds |
+./spec/features/travel_times_spec.rb[1:1:1]   | passed | 0.12942 seconds |
+./spec/features/travel_times_spec.rb[1:2:1]   | failed | 0.82965 seconds |
 ./spec/requests/travel_times_spec.rb[1:1:1:1] | passed | 1.23 seconds    |

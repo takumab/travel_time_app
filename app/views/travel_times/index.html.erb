@@ -1,1 +1,6 @@
 <%= render 'form' %>
+
+<p>
+  Your predicted travel time for <%= @cm.startcoord %> and
+  <%= @cm.endcoord %> is <%= @cm.get_time %> minutes
+</p>
