@@ -1,0 +1,10 @@
+
+
+
+<% @locations.each do |location| %>
+  <ul>
+    <li><%= location.start_address %></li>
+    <li><%= location.latitude %>, <%= location.longitude %></li>
+    <li><%= @cm %></li>
+  </ul>
+<% end %>
