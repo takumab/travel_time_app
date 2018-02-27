@@ -7,6 +7,8 @@ class LocationsController < ApplicationController
 
   def new
     @location = Location.new
+    puts @location.destination.nil?
+    1.times { @location.destination.find(params[:location_id]) }
   end
 
   def show
@@ -35,6 +37,6 @@ class LocationsController < ApplicationController
   end
 
   def location_params
-    params.require(:location).permit(:start_address, :end_address)
+    params.require(:location).permit(:start_address, destination_attributes: [:id, :address])
   end
 end

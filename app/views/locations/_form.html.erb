@@ -1,15 +1,17 @@
 <%= form_for(@location) do  |f| %>
 
   <div class="form-group">
-    <%= f.label :start_address %>
+    <%= f.label :from %>:
     <%= f.text_field :start_address %>
   </div>
-
-  <div class="form-group">
-    <%= f.label :end_address %>
-    <%= f.text_field :end_address %>
-  </div>
-
+  <br>
+  <%= f.fields_for :destination do |destination_form| %>
+    <div class="form-group">
+      <%= destination_form.label :to %>:
+      <%= destination_form.text_field :address %>
+    </div>
+  <% end %>
+  <br>
   <%= submit_tag 'Submit' %>
 
 <% end %>
