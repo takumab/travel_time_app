@@ -3,7 +3,6 @@ class LocationsController < ApplicationController
 
   def index
     @locations = Location.all
-    #@city_mapper = CityMapperApi.new(startcoord: )
   end
 
   def new
