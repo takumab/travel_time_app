@@ -19,6 +19,20 @@
       </div>
     <% end %>
 
+    <div class="form-group row">
+      <div class="col-sm-6">
+        <%= f.label :leaving_time %>:
+        <%= time_select :location, :leaving_time %>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-6">
+        <%= f.label :date %>:
+        <%= date_select :location, :leaving_time %>
+      </div>
+    </div>
+
     <%= f.submit 'Submit', class: 'btn btn-primary' %>
 
   <% end %>

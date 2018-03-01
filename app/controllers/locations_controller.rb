@@ -35,11 +35,12 @@ class LocationsController < ApplicationController
     @location = Location.find(params[:id])
     @destination = @location.destination.address
     slat_long = @location[:latitude].to_s + ',' + @location[:longitude].to_s
-    dlat_long= @location.destination.latitude.to_s + ',' + @location.destination.longitude.to_s
-    @cm = CityMapperApi.new(slat_long, dlat_long, '2018-02-21T19:00:02-0500', 'arrival')
+    dlat_long = @location.destination.latitude.to_s + ',' + @location.destination.longitude.to_s
+    leaving_time = @location[:leaving_time]
+    @cm = CityMapperApi.new(slat_long, dlat_long, leaving_time , 'arrival')
   end
 
   def location_params
-    params.require(:location).permit(:start_address, destination_attributes: [:id, :address])
+    params.require(:location).permit(:start_address, :leaving_time, destination_attributes: [:id, :address])
   end
 end
