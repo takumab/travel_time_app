@@ -3,12 +3,12 @@ class LocationsController < ApplicationController
 
   def index
     @locations = Location.all
+    #@city_mapper = CityMapperApi.new(startcoord: )
   end
 
   def new
     @location = Location.new
-    puts @location.destination.nil?
-    1.times { @location.destination.find(params[:location_id]) }
+    2.times { @location.build_destination }
   end
 
   def show
@@ -34,6 +34,12 @@ class LocationsController < ApplicationController
 
   def set_location
     @location = Location.find(params[:id])
+    @destination = @location.destination.address 
+    slat_long = @location[:latitude].to_s + ',' + @location[:longitude].to_s
+    dlat_long= @location.destination.latitude.to_s + ',' + @location.destination.longitude.to_s
+    puts slat_long
+    puts dlat_long
+    @cm = CityMapperApi.new(slat_long, dlat_long, '2018-02-21T19:00:02-0500', 'arrival')
   end
 
   def location_params
