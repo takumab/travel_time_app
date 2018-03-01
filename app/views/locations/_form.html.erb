@@ -1,18 +1,20 @@
-<%= form_for(@location) do  |f| %>
+<div class="container">
+  <%= form_for(@location) do  |f| %>
 
-  <div class="form-group">
-    <%= f.label :from %>:
-    <%= f.text_field :start_address, value: '14-22 Elder St, London E1 6BT' %>
-  </div>
-  <br>
-  <%= f.fields_for :destination do |destination_form| %>
     <div class="form-group">
-      <%= destination_form.label :to %>:
-      <%= destination_form.text_field :address %>
+      <%= f.label :from %>:
+      <%= f.text_field :start_address, value: '14-22 Elder St, London E1 6BT', class: 'form-control' %>
     </div>
+    <br>
+    <%= f.fields_for :destination do |destination_form| %>
+      <div class="form-group">
+        <%= destination_form.label :to %>:
+        <%= destination_form.text_field :address, class: 'form-control' %>
+      </div>
+    <% end %>
+    <br>
+
+    <%= f.submit 'Submit', class: 'btn btn-primary' %>
+
   <% end %>
-  <br>
-
-  <%= f.submit 'Submit' %>
-
-<% end %>
+</div>
