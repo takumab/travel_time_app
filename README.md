@@ -24,7 +24,7 @@ gem 'database_cleaner'
 ```
 
 
-## Installation
+# Installation
 ```
 $git clone https://github.com/takumab/travel_time_app
 $cd travel_time_app
