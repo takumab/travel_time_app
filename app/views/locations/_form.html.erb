@@ -2,7 +2,7 @@
 
   <div class="form-group">
     <%= f.label :from %>:
-    <%= f.text_field :start_address %>
+    <%= f.text_field :start_address, value: '14-22 Elder St, London E1 6BT' %>
   </div>
   <br>
   <%= f.fields_for :destination do |destination_form| %>
@@ -12,6 +12,7 @@
     </div>
   <% end %>
   <br>
-  <%= submit_tag 'Submit' %>
+
+  <%= f.submit 'Submit' %>
 
 <% end %>
