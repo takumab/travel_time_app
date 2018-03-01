@@ -4,5 +4,4 @@ class Location < ApplicationRecord
 
   has_one :destination
   accepts_nested_attributes_for :destination
-
 end
