@@ -36,11 +36,11 @@ $bin/rails s
 
 ## Setting up API Keys
 
-1. Google Maps API Key: Go to this link [https://developers.google.com/maps/documentation/javascript/get-api-key][Google Maps] to set up a key.
-2. I've incorporated the [https://github.com/bkeepers/dotenv][dotenv-rails] gem in order to store my API key.
+1. Google Maps API Key: Go to this link [Google Maps](https://developers.google.com/maps/documentation/javascript/get-api-key) to set up a key.
+2. I've incorporated the [dotenv-rails](https://github.com/bkeepers/dotenv) gem in order to store my API key.
 3. 'bundle install'
 4. Create .env file and place keys in this file and then assign it to ENV['GOOLGE_MAPS_KEY']
-5. Get [https://citymapper.3scale.net/docs][City Mapper API Key] and set it to an environment variable
+5. Get [City Mapper API Key](https://citymapper.3scale.net/docs) and set it to an environment variable
 
 ## Usage
-The root page consists of the form. Just enter your origin address and destination address and hit submit button. 
+The root page consists of the form. Just enter your origin address and destination address and hit submit button.
