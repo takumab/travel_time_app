@@ -33,11 +33,9 @@ class LocationsController < ApplicationController
 
   def set_location
     @location = Location.find(params[:id])
-    @destination = @location.destination.address 
+    @destination = @location.destination.address
     slat_long = @location[:latitude].to_s + ',' + @location[:longitude].to_s
     dlat_long= @location.destination.latitude.to_s + ',' + @location.destination.longitude.to_s
-    puts slat_long
-    puts dlat_long
     @cm = CityMapperApi.new(slat_long, dlat_long, '2018-02-21T19:00:02-0500', 'arrival')
   end
 
