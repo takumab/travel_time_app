@@ -1,18 +1,23 @@
 <div class="container">
+  <h2>Where ya headed?</h2>
+
   <%= form_for(@location) do  |f| %>
 
-    <div class="form-group">
-      <%= f.label :from %>:
-      <%= f.text_field :start_address, value: '14-22 Elder St, London E1 6BT', class: 'form-control' %>
+    <div class="form-group row">
+      <div class="col-sm-6">
+        <%= f.label :from %>:
+        <%= f.text_field :start_address, value: '14-22 Elder St, London E1 6BT',
+                                        class: 'form-control' %>
+      </div>
     </div>
-    <br>
     <%= f.fields_for :destination do |destination_form| %>
-      <div class="form-group">
+      <div class="form-group row">
+        <div class="col-sm-6">
         <%= destination_form.label :to %>:
         <%= destination_form.text_field :address, class: 'form-control' %>
+        </div>
       </div>
     <% end %>
-    <br>
 
     <%= f.submit 'Submit', class: 'btn btn-primary' %>
 
