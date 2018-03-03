@@ -1,2 +1,12 @@
-<p>From <strong><em><%= @location.start_address %></em></strong> to <strong><em><%= @destination %></em></strong> it takes approximately <strong><em><%= @cm.get_time %></em></strong> </p>
-<p><strong>Latitude</strong>: <%= @location.latitude %>, <strong>Longitude</strong>: <%= @location.longitude %></p>
+
+<div class="row">
+  <div class="traveltimeinfo col-sm-12">
+    <header><h1>Your Travel time is:</h1></header>
+    <section class="results">
+      <p>
+        From <strong><em><%= @location.start_address %></em></strong> to <strong><em><%= @destination %></em></strong> it takes approximately <strong><em><%= @cm.get_time %></em></strong>
+      </p>
+    </section>
+
+  </div>
+</div>
