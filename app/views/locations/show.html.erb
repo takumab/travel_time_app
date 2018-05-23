@@ -2,10 +2,19 @@
 <div class="row">
   <div class="traveltimeinfo col-sm-12">
     <header><h1>Your Travel time is:</h1></header>
+
     <section class="results">
       <p>
-        From <strong><em><%= @location.start_address %></em></strong> to <strong><em><%= @destination %></em></strong> it takes approximately <strong><em><%= @cm.get_time %></em></strong>
+        <% if @time.nil? %>
+          Sorry but the City Mapper Api is down at the moment. We will be back shortly
+        <% else %>
+          From <strong><em><%= @location.start_address %></em></strong> to <strong><em><%= @destination %></em></strong> it takes approximately
+          <strong><em>
+            <%= @time %>
+          </em></strong>
+        <% end %>
       </p>
+      <p><%= link_to "New origin and destination", new_location_path %></p>
     </section>
 
   </div>

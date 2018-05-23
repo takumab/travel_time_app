@@ -38,6 +38,8 @@ class LocationsController < ApplicationController
     dlat_long = @location.destination.latitude.to_s + ',' + @location.destination.longitude.to_s
     leaving_time = @location[:leaving_time]
     @cm = CityMapperApi.new(slat_long, dlat_long, leaving_time , 'arrival')
+    @time = @cm.get_time
+  rescue 
   end
 
   def location_params
